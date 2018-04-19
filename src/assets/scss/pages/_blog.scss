@@ -1,0 +1,106 @@
+.post {
+	time{
+		border-bottom: $border-grey;
+		max-width: 100%;
+		padding: 5px 10px;
+		font-weight: bold;
+		display: block;
+		font-size: 9px;
+		color: $color-grey-dark;
+	}
+	ul {
+		border-top: $border-grey;
+		padding: 5px 10px;
+	}
+	li {
+		display: inline-block;
+		font-size: 9px;
+		color: $color-grey-dark;
+		
+		&::before {
+			content: "";
+			font-size: 7px;
+			border-left: 1px solid $color-grey;
+			padding-left: 3px;
+		}
+		&:first-child::before {
+			border: none;
+		}
+		a {
+			color: $color-green;
+		}
+	}
+	h1 {
+		font-size: 20px;
+		font-weight: bold;
+		color: $color-blue-light;
+		margin: 25px 25px 5px;
+	}
+	p {
+		margin: 0 25px 20px;
+	}
+}
+#upper-post {
+	border-radius: 0 0 $radius $radius;
+	background: url("../images/bg_leaf.png") center top/cover no-repeat;
+	box-shadow: none;
+	
+	time, li, a, h1, p {
+		color:  $color-white;
+	}
+	time, ul {
+		border-color: rgba(255,255,255,0.3);
+	}
+	h1, p {
+		width: 50%;
+	}
+	.button {
+		display: inline-block;
+		padding: 0 13px;
+		color: $color-blue-light;
+		font-weight: bold;
+		background-color: $color-white;
+		border-radius: 20px;
+		margin: 0 20px 30px;
+		box-shadow: $shadow-container;
+	}
+}
+.recend_popular {
+	display: flex;
+	
+	.title-list {
+		flex-grow: 1;
+		
+		&:first-of-type {
+			margin-right: $margin-vertical;
+		}
+		h2 {
+			font-size: 18px;
+		}
+		li {
+			counter-increment: step-counter;
+			
+			&::before {
+				content: counter(step-counter);
+				margin-right: 5px;
+				padding: 3px 8px;
+				color: $color-black;
+			}
+		}
+	}
+}
+.title-list {
+	overflow: hidden;
+
+	h2, h3 {
+		color: $color-grey-dark;
+		padding: 10px 15px 0;
+		font-weight: bold;
+		background: linear-gradient($color-white, $color-grey-light);
+	}
+	li {
+		padding: 0 15px;
+		border-top: $border-grey;
+		color: $color-blue-light;
+	}
+}

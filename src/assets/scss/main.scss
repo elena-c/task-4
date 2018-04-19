@@ -1,13 +1,16 @@
 /*reset imports*/
 @import "modules/reset";
 
-/*modules*/
-@import "modules/fonts";
 @import "vars";
-@import "modules/elements";
-@import "modules/forms";
+
+/*modules*/
+@import "modules/sidebar";
 @import "modules/header";
 @import "modules/footer";
+
+/*pages*/
+@import "pages/blog";
+
 
 /*partials*/
 @import "partials/general";

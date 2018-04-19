@@ -1,13 +1,9 @@
 /*general*/
-body, html {
-	font:16px/24px $font-regular;
-	height:100%;
-	background:#fff;
-	color: $color-black;
-	min-width: 1180px;
-}
-select, input, textarea {
-	outline:none;
+.post, .title-list, footer, nav, .search {
+	background-color: $color-white;
+	margin-bottom: $margin-horizontal;
+	border-radius: $radius;
+	box-shadow: $shadow-container;
 }
 a {
 	color:inherit;
@@ -16,33 +12,34 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+body, html {
+	font:12px/28px $font-regular;
+	height:100%;
+	background: linear-gradient($color-black 7%, $color-blue 20%, $color-blue-light 35%, $color-grey-light 50%);
+	background-attachment: fixed;
+	color: $color-black;
+	min-width: 1180px; 
+}
 .page {
-	position:relative;
-	overflow:hidden;
+	max-width: 880px;
+	margin: 50px auto 15px;
 	min-height:100%;
+	display: flex;
+	padding: 0 10px;
 }
-
-p {
-	margin: 0 0 28px;
+.container {
+	margin-right: $margin-vertical;
+	flex: 3 1 630px;
 }
-
-//content
-.wrapper {
-	max-width: 1180px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 
 @media screen and (max-width: $tablet) {
-  body,html {
+	body,html {
 		min-width: 768px;
 	}
-
 }
-
+  
 @media screen and (max-width: $mobile) {
 	body,html {
 		min-width: 320px;
 	}
-}
+}  
